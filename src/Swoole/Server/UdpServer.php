@@ -9,8 +9,8 @@
 namespace Core\Swoole\Server;
 
 
-use One\Swoole\Event\UdpEvent;
-use One\Swoole\Server;
+use Core\Swoole\Event\UdpEvent;
+use Core\Swoole\Server;
 
 class UdpServer extends Server
 {

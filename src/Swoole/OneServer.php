@@ -9,15 +9,15 @@
 namespace Core\Swoole;
 
 
-use One\ConfigTrait;
-use One\Swoole\Server\HttpServer;
-use One\Swoole\Server\UdpServer;
-use One\Swoole\Server\WsServer;
+use Core\ConfigTrait;
+use Core\Swoole\Server\HttpServer;
+use Core\Swoole\Server\UdpServer;
+use Core\Swoole\Server\WsServer;
 
 /**
  * Class Protocol
  * @mixin \swoole_websocket_server
- * @package One\Swoole
+ * @package Core\Swoole
  */
 class OneServer
 {
@@ -169,7 +169,7 @@ class OneServer
         $obj   = new $class($server, $conf);
 
         foreach ($funcs as $func) {
-            if (strpos($func->class, 'One\\Swoole\\') === false) {
+            if (strpos($func->class, 'Core\\Swoole\\') === false) {
                 if (substr($func->name, 0, 2) == 'on') {
                     $call[strtolower(substr($func->name, 2))] = $func->name;
                 }

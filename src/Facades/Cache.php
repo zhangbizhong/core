@@ -3,13 +3,13 @@
 namespace Core\Facades;
 
 
-use One\Cache\File;
-use One\Cache\Redis;
+use Core\Cache\File;
+use Core\Cache\Redis;
 
 /**
  * Class Cache
  * @package Facades
- * @mixin \One\Cache\Redis
+ * @mixin \Core\Cache\Redis
  * @mixin \Redis
  * @method string get($key, \Closure $closure = null, $ttl = 0, $tags = []) static
  * @method bool delRegex($key) static

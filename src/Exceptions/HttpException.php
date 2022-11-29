@@ -2,8 +2,8 @@
 
 namespace Core\Exceptions;
 
-use One\Facades\Log;
-use One\Http\Response;
+use Core\Facades\Log;
+use Core\Http\Response;
 
 class HttpException extends \Exception
 {

@@ -9,7 +9,7 @@
 namespace Core\Swoole\Listener;
 
 
-use One\Swoole\Event\TcpEvent;
+use Core\Swoole\Event\TcpEvent;
 
 class Tcp extends Port
 {

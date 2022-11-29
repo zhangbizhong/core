@@ -8,13 +8,13 @@
 
 namespace Core\Swoole;
 
-use One\Facades\Log;
-use One\Protocol\ProtocolAbstract;
+use Core\Facades\Log;
+use Core\Protocol\ProtocolAbstract;
 use Swoole\Process;
 
 /**
  * Class Server
- * @package One\Swoole
+ * @package Core\Swoole
  * @mixin OneServer
  */
 class Server

@@ -28,7 +28,7 @@ class Session
             $config['lifetime'] = intval(ini_get('session.gc_maxlifetime'));
         }
         if ($config['drive'] == 'redis') {
-            session_set_save_handler(new \One\Cache\SessionHandler($config['lifetime']), true);
+            session_set_save_handler(new \Core\Cache\SessionHandler($config['lifetime']), true);
         }
         unset($config['drive']);
         if ($id && preg_match('/^\w+$/', $id)) {

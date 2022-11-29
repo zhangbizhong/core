@@ -8,10 +8,10 @@
 
 namespace Core\Swoole\Server;
 
-use One\Swoole\Event\HttpEvent;
-use One\Swoole\Event\WsEvent;
-use One\Swoole\Server;
-use One\Swoole\Session;
+use Core\Swoole\Event\HttpEvent;
+use Core\Swoole\Event\WsEvent;
+use Core\Swoole\Server;
+use Core\Swoole\Session;
 
 class WsServer extends Server
 {

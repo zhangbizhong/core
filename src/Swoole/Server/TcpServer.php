@@ -9,8 +9,8 @@
 namespace Core\Swoole\Server;
 
 
-use One\Swoole\Event\TcpEvent;
-use One\Swoole\Server;
+use Core\Swoole\Event\TcpEvent;
+use Core\Swoole\Server;
 
 class TcpServer extends Server
 {

@@ -8,9 +8,9 @@
 
 namespace Core\Swoole\Client;
 
-use One\ConfigTrait;
-use One\Protocol\ProtocolAbstract;
-use One\Swoole\Pools;
+use Core\ConfigTrait;
+use Core\Protocol\ProtocolAbstract;
+use Core\Swoole\Pools;
 use Swoole\Coroutine\Client;
 
 class Tcp

@@ -2,7 +2,7 @@
 
 namespace Core\Cache;
 
-use One\Facades\Redis as FacadesRedis;
+use Core\Facades\Redis as FacadesRedis;
 
 class SessionHandler implements \SessionHandlerInterface
 {

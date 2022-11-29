@@ -2,14 +2,14 @@
 
 namespace Core\Swoole;
 
-use One\Facades\Log;
+use Core\Facades\Log;
 
 /**
  * Class Response
- * @package One\Swoole
+ * @package Core\Swoole
  * @mixin \swoole_http_response
  */
-class Response extends \One\Http\Response
+class Response extends \Core\Http\Response
 {
 
     /**
@@ -38,7 +38,7 @@ class Response extends \One\Http\Response
 
     /**
      * @param $code
-     * @return $this|\One\Http\Response
+     * @return $this|\Core\Http\Response
      */
     public function code($code)
     {

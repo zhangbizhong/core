@@ -2,7 +2,7 @@
 
 namespace Core\Cache;
 
-use One\ConfigTrait;
+use Core\ConfigTrait;
 
 class File extends Cache
 {

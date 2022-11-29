@@ -2,9 +2,9 @@
 
 namespace Core\Database\ClickHouse;
 
-use One\ConfigTrait;
-use One\Facades\Log;
-use One\Swoole\Pools;
+use Core\ConfigTrait;
+use Core\Facades\Log;
+use Core\Swoole\Pools;
 use OneCk\CkException;
 use OneCk\Client;
 

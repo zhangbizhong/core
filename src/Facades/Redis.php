@@ -5,7 +5,7 @@ namespace Core\Facades;
 /**
  * Class Cache
  * @package Facades
- * @mixin \One\Cache\Redis
+ * @mixin \Core\Cache\Redis
  * @mixin \Redis
  * @method string get($key, \Closure $closure = null, $ttl = 0, $tags = []) static
  * @method bool delRegex($key) static
@@ -18,6 +18,6 @@ class Redis extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \One\Cache\Redis::class;
+        return \Core\Cache\Redis::class;
     }
 }

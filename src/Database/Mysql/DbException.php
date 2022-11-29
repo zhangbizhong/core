@@ -2,7 +2,7 @@
 
 namespace Core\Database\Mysql;
 
-use One\Facades\Log;
+use Core\Facades\Log;
 
 class DbException extends \Exception
 {

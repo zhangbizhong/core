@@ -102,12 +102,12 @@ class Log
 
     public function setTraceId($id)
     {
-        \One\Swoole\Context::set(self::LogId, $id);
+        \Core\Swoole\Context::set(self::LogId, $id);
     }
 
     public function getTraceId()
     {
-        $id = \One\Swoole\Context::get(self::LogId);
+        $id = \Core\Swoole\Context::get(self::LogId);
         if ($id === null) {
             $id = uuid();
             $this->setTraceId($id);

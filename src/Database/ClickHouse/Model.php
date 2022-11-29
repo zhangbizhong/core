@@ -2,11 +2,11 @@
 
 namespace Core\Database\ClickHouse;
 
-use One\Database\Mysql\ArrayModel;
-use One\Database\Mysql\ListModel;
-use One\Database\Mysql\PageInfo;
-use One\Database\Mysql\Relation;
-use One\Database\Mysql\RelationTrait;
+use Core\Database\Mysql\ArrayModel;
+use Core\Database\Mysql\ListModel;
+use Core\Database\Mysql\PageInfo;
+use Core\Database\Mysql\Relation;
+use Core\Database\Mysql\RelationTrait;
 use OneCk\Client;
 
 /**

@@ -9,8 +9,8 @@
 namespace Core\Swoole\Server;
 
 
-use One\Swoole\Event\HttpEvent;
-use One\Swoole\Server;
+use Core\Swoole\Event\HttpEvent;
+use Core\Swoole\Server;
 
 class HttpServer extends Server
 {

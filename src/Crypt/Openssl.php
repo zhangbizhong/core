@@ -2,7 +2,7 @@
 
 namespace Core\Crypt;
 
-use One\ConfigTrait;
+use Core\ConfigTrait;
 
 class Openssl
 {

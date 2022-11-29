@@ -8,11 +8,11 @@
 
 namespace Core\Swoole\Event;
 
-use One\Database\Mysql\DbException;
-use One\Facades\Log;
-use One\Http\Router;
-use One\Http\RouterException;
-use One\Protocol\TcpRouterData;
+use Core\Database\Mysql\DbException;
+use Core\Facades\Log;
+use Core\Http\Router;
+use Core\Http\RouterException;
+use Core\Protocol\TcpRouterData;
 
 trait TcpEvent
 {

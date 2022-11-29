@@ -2,13 +2,13 @@
 
 namespace Core\Cache;
 
-use One\ConfigTrait;
-use One\Facades\Log;
-use One\Swoole\Pools;
+use Core\ConfigTrait;
+use Core\Facades\Log;
+use Core\Swoole\Pools;
 
 /**
  * Class Redis
- * @package One\Cache
+ * @package Core\Cache
  * @mixin \Redis
  */
 class Redis extends Cache

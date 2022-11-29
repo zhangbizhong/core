@@ -2,7 +2,7 @@
 
 namespace Core\Http;
 
-use One\Exceptions\HttpException;
+use Core\Exceptions\HttpException;
 
 class Response
 {
@@ -35,9 +35,9 @@ class Response
     {
         if (!$this->_session) {
             if (_CLI_) {
-                $this->_session = new \One\Swoole\Session($this);
+                $this->_session = new \Core\Swoole\Session($this);
             } else {
-                $this->_session = new \One\Http\Session($this);
+                $this->_session = new \Core\Http\Session($this);
             }
         }
         return $this->_session;

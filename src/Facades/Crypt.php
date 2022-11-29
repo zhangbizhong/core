@@ -3,11 +3,11 @@
 
 namespace Core\Facades;
 
-use One\Crypt\Openssl;
+use Core\Crypt\Openssl;
 
 /**
  * Class Crypt
- * @package One\Facades
+ * @package Core\Facades
  * @mixin Openssl
  * @method string hash($str) static
  * @method bool verifyHash($str, $hash) static

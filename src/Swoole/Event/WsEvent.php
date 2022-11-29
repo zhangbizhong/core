@@ -8,12 +8,12 @@
 
 namespace Core\Swoole\Event;
 
-use One\Database\Mysql\DbException;
-use One\Facades\Log;
-use One\Http\Router;
-use One\Http\RouterException;
-use One\Swoole\Request;
-use One\Swoole\Session;
+use Core\Database\Mysql\DbException;
+use Core\Facades\Log;
+use Core\Http\Router;
+use Core\Http\RouterException;
+use Core\Swoole\Request;
+use Core\Swoole\Session;
 
 trait WsEvent
 {

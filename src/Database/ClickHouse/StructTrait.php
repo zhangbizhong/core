@@ -2,7 +2,7 @@
 
 namespace Core\Database\ClickHouse;
 
-use One\Facades\Cache;
+use Core\Facades\Cache;
 
 trait StructTrait
 {

@@ -2,7 +2,7 @@
 
 namespace Core\Exceptions;
 
-use One\ConfigTrait;
+use Core\ConfigTrait;
 
 class Handler
 {

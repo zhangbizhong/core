@@ -179,7 +179,7 @@ function filter_xss($str, $allow_tags = null)
  */
 function router($str, $data = [])
 {
-    $url = array_get(\One\Http\Router::$as_info, $str);
+    $url = array_get(\Core\Http\Router::$as_info, $str);
     if ($data) {
         $key  = array_map(function ($v) {
             return '{' . $v . '}';
@@ -238,9 +238,9 @@ function set_arr_key($arr, $key, $unique = true)
 function one_go($call)
 {
     if (_CLI_) {
-        $log_id = \One\Facades\Log::getTraceId();
+        $log_id = \Core\Facades\Log::getTraceId();
         return \Swoole\Coroutine::create(function () use ($call, $log_id) {
-            $go_id = \One\Facades\Log::setTraceId($log_id);
+            $go_id = \Core\Facades\Log::setTraceId($log_id);
             try {
                 $call();
             } catch (\Throwable $e) {
@@ -272,9 +272,9 @@ function redis_lock($tag)
 {
     $time = time();
     $key  = 'linelock:' . $tag;
-    while (!\One\Facades\Redis::setnx($key, $time + 3)) {
+    while (!\Core\Facades\Redis::setnx($key, $time + 3)) {
         $time = time();
-        if ($time > \One\Facades\Redis::get($key) && $time > \One\Facades\Redis::getSet($key, $time + 3)) {
+        if ($time > \Core\Facades\Redis::get($key) && $time > \Core\Facades\Redis::getSet($key, $time + 3)) {
             break;
         } else {
             usleep(10);
@@ -289,7 +289,7 @@ function redis_lock($tag)
 function redis_unlock($tag)
 {
     $key = 'linelock:' . $tag;
-    \One\Facades\Redis::del($key);
+    \Core\Facades\Redis::del($key);
 }
 
 /**
@@ -316,7 +316,7 @@ function one_get_object_vars($obj)
 if (function_exists('error_report') === false) {
     function error_report(\Throwable $e)
     {
-        \One\Facades\Log::error([
+        \Core\Facades\Log::error([
             'file'  => $e->getFile() . ':' . $e->getLine(),
             'msg'   => $e->getMessage(),
             'code'  => $e->getCode(),

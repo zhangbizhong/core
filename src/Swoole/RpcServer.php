@@ -8,7 +8,7 @@
 
 namespace Core\Swoole;
 
-use One\Facades\Cache;
+use Core\Facades\Cache;
 
 class RpcServer
 {

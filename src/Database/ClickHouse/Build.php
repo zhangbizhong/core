@@ -2,9 +2,9 @@
 
 namespace Core\Database\ClickHouse;
 
-use One\Database\Mysql\Join;
-use One\Database\Mysql\ListModel;
-use One\Database\Mysql\PageInfo;
+use Core\Database\Mysql\Join;
+use Core\Database\Mysql\ListModel;
+use Core\Database\Mysql\PageInfo;
 use OneCk\Client;
 
 class Build

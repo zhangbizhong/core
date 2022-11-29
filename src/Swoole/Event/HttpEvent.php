@@ -8,13 +8,13 @@
 
 namespace Core\Swoole\Event;
 
-use One\Database\Mysql\DbException;
-use One\Exceptions\Handler;
-use One\Exceptions\HttpException;
-use One\Facades\Log;
-use One\Http\Router;
-use One\Http\RouterException;
-use One\Swoole\Server;
+use Core\Database\Mysql\DbException;
+use Core\Exceptions\Handler;
+use Core\Exceptions\HttpException;
+use Core\Facades\Log;
+use Core\Http\Router;
+use Core\Http\RouterException;
+use Core\Swoole\Server;
 
 trait HttpEvent
 {
@@ -29,15 +29,15 @@ trait HttpEvent
      */
     protected function httpRouter(\swoole_http_request $request, \swoole_http_response $response)
     {
-        $req   = new \One\Swoole\Request($request);
-        $res   = new \One\Swoole\Response($req, $response);
+        $req   = new \Core\Swoole\Request($request);
+        $res   = new \Core\Swoole\Response($req, $response);
         try {
             $router = new Router();
             $server = $this instanceof Server ? $this : $this->server;
             list($req->class, $req->func, $mids, $action, $req->args, $req->as_name) = $router->explain($req->method(), $req->uri(), $req, $res, $server);
             $f    = $router->getExecAction($mids, $action, $res, $server);
             $data = $f();
-        } catch (\One\Exceptions\HttpException $e) {
+        } catch (\Core\Exceptions\HttpException $e) {
             $data = Handler::render($e);
         } catch (\Throwable $e) {
             error_report($e);

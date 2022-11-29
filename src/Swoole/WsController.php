@@ -8,7 +8,7 @@
 
 namespace Core\Swoole;
 
-use One\Facades\Log;
+use Core\Facades\Log;
 
 class WsController
 {

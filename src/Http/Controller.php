@@ -2,8 +2,8 @@
 
 namespace Core\Http;
 
-use One\Exceptions\HttpException;
-use One\Facades\Log;
+use Core\Exceptions\HttpException;
+use Core\Facades\Log;
 use SebastianBergmann\CodeCoverage\Report\PHP;
 
 class Controller
@@ -15,7 +15,7 @@ class Controller
     protected $request = null;
 
     /**
-     * @var \One\Swoole\Response
+     * @var \Core\Swoole\Response
      */
     protected $response = null;
 

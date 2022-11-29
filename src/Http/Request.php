@@ -2,7 +2,7 @@
 
 namespace Core\Http;
 
-use One\Facades\Log;
+use Core\Facades\Log;
 
 class Request
 {

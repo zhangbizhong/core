@@ -8,7 +8,7 @@
 
 namespace Core\Swoole\Listener;
 
-use One\Swoole\Event\WsEvent;
+use Core\Swoole\Event\WsEvent;
 
 class Ws extends Port
 {
